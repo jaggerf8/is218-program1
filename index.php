@@ -32,11 +32,32 @@
     // print value key
 
 
+echo '<br>';
 
-
-  //making a class
+ //making a class
    class myclass
    {
+     public $myPublic;
+     private $myPrivate;
+     protected $myProtected;
+
+     public function __construct()
+     {
+       $this->myPublic = 1;
+       $this->myPrivate = 2;
+       $this->myProtected = 3;
+     // internal reference to the object within a class
+     // the arrow points to a property or method being accessed within the
+     // object
+
+     $this->sayhello('Jagger');
+     //call method within an object and pass a value
+     }
+
+     public function sayhello($name)
+     {
+       echo 'hello ' . $name . "<br>";
+     }
    }    
   //this is how u instantiate an object
   $obj = new myclass;
